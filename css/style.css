@@ -2,6 +2,10 @@ html {
     background-color: black;
     color: #c0c0c0;
     font-family: 'Playfair Display', serif;
+
+}
+
+.first-page {
     margin: 0 3vw;
 }
 
@@ -10,6 +14,7 @@ html {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
+    margin-top: 2%;
 }
 
 .left-menu {
@@ -30,8 +35,8 @@ html {
 }
 
 .center-menu {
-    display: flex;
-    align-items: center;
+    display: none;
+    color: #c0c0c0;
 }
 
 .center-menu ul {
@@ -39,7 +44,7 @@ html {
     margin: 0 0 0 25px;
     padding: 0;
     position: absolute;
-    left: 10%;
+    left: 12%;
 }
 
 .center-menu li {
@@ -67,4 +72,74 @@ html {
     color: #c0c0c0;
     border: 1px solid #c0c0c0;
     padding: 15px 25px 15px 25px;
+}
+
+.extended-menu-button {
+    color:  #c0c0c0;
+    visibility: visible;
+    margin: 3.4% 0 auto 78px;
+    position: absolute;
+}
+
+@media only screen and (min-width: 580px) {
+    .center-menu {
+        display: flex;
+        align-items: center;
+    }
+    .extended-menu-button {
+        visibility: hidden;
+    }
+}
+
+.author-main-picture {
+    width: auto;
+    height: 100vh;
+    max-width: 60%;
+    object-fit: cover;
+    float: right;
+    margin: -55px 0 0 0;
+    padding: 0;
+}
+
+.author-text {
+    position: absolute;
+    top: 25%
+}
+
+.author-name {
+    font-size: clamp(2rem, 10vw, 25rem);
+    overflow: hidden;
+    word-break: break-word;
+    max-width: 50%;
+    margin: 0;
+}
+
+.author-description {
+    font-size: clamp(0.5rem, 1.2rem, 2rem);
+    max-width: 30vw;
+}
+
+@media only screen and (max-width: 700px) {
+    .author-text {
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+    .author-name {
+        max-width: 100%;
+        margin: 15px 0px;
+    }
+
+    .author-description {
+        max-width: 100%;
+        margin: 0 25px;
+    }
+
+    .author-main-picture {
+        float: none;
+        display: block;
+        margin: -50px auto 0 auto;
+        max-width: 100%;
+    }
 }
