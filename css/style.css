@@ -158,13 +158,12 @@ main {
 }
 
 .round-rectangle {
-    position: absolute;
+    position: fixed;
     left: 50%;
     bottom: 3%;
     border: 1px solid #f0f0f0;
     border-radius: 50px;
-    width: auto;
-    height: 11%;
+    z-index: 3;
 }
 
 .dots {
