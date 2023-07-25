@@ -181,6 +181,7 @@ a {
 .projects {
     text-align: center;
     margin: 15vh 3vw 0 3vw;
+    font-size: clamp(1rem, 1vw, 2rem);
 }
 
 .projects ul {
@@ -190,11 +191,14 @@ a {
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
+    border-bottom: 1px solid #f0f0f0;
+    border-left: 1px solid #f0f0f0;
 }
 
 .project-element {
     flex-grow: 1;
-    border: 1px solid #f0f0f0;
+    border-top: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
     padding: 3vh 5vw;
     white-space: nowrap;
     font-size: clamp(1rem, 2vw, 2rem);
@@ -202,8 +206,4 @@ a {
 
 .project-logo {
     font-size: clamp(0.9rem, 1.3vw, 2rem)!important;
-}
-
-.project-element:not(:last-child) {
-    border-right: 0;
 }
